@@ -80,6 +80,13 @@
 			$letter = strtoupper($letter);
 			if(ctype_alpha($letter) || preg_match('/^[A-PR-UWY-ZĄĆĘŁŃÓŚŹŻ]*$/iu',$letter)){
 				$letter = strtoupper($letter);
+				if (strpos($_SESSION['currentProgress'], $letter) !== false) {
+					$output = array(
+						"message" => "Wprowadzałeś już tę literę!"
+						);
+						echo json_encode($output);
+						break;
+				}
 				if(checkIfWordContainsLetter($_SESSION['word'], $letter)){
 					$currentProgress = guess($_SESSION['word'],$letter,$_SESSION['currentProgress']);
 					$_SESSION['currentProgress'] = $currentProgress;
