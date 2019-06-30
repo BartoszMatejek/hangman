@@ -126,10 +126,10 @@ if (canvas.getContext) {
 			renderPoints();
             alert("Gra przegrana :( . Spróbuj jeszcze raz!");
 			guessButton.disabled = false;
-            guessButton.innerText = 'Try again!';
+            guessButton.innerText = 'Nowa gra';
 
         } else {
-            guessButton.innerText = 'Guess';
+            guessButton.innerText = 'Potwierdź';
             guessButton.disabled = true;
         }
 		}
