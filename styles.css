@@ -1,0 +1,90 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 250, 225);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+canvas {
+    display: block;
+}
+
+.letters-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.letters-item {
+    margin: 5px;
+    padding: 5px;
+    width: 15px;
+    height: 20px;
+    text-align: center;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.letters-item-space {
+    border-bottom-style: unset;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.hangman {
+    grid-row: 1;
+}
+
+.letters {
+    grid-row: 2;
+    margin: 20px;
+}
+
+.actions {
+    grid-row: 3;
+    padding: 10px;
+}
+
+.actions > input {
+    width: 30px;
+    height: 30px;
+    padding: 1px;
+    text-align: center;
+    font-size: 16pt;
+    border: unset;
+    border-style: solid;
+    border-width: 1px;
+    background: rgb(255, 234, 199);
+}
+
+.actions > input:focus {    
+    outline: none;
+}
+
+.actions > button {
+    font-size: 16pt;
+    margin-left: 20px;
+    padding: 4px;
+    border: unset;
+    border-style: solid;
+    border-width: 1px;
+    background: rgb(255, 234, 199);
+}
+
+.actions > button:hover {
+    cursor: pointer;
+    background: rgb(255, 240, 215);
+}
+
+.wrong-letters {
+    grid-row: 4;
+    padding: 10px;
+}

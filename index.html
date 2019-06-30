@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<head>
+    <title>Hangman</title>
+	<meta charset="UTF-8">
+    <link href="./loader.css" rel="stylesheet" type="text/css" />
+    <link href="./styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="loader" class="loading"></div>
+    <div class="container">
+        <div class="hangman">
+            <canvas id="canvas" width="250" height="300">
+                Your browser isn't supported, sorry.
+            </canvas>
+        </div>
+        <div class="letters">
+            <div id="lettersContainer"></div>
+        </div>
+        <div class="actions">
+            <input id="guessInput">
+            <button id="guessButton">Refresh</button>
+        </div>
+		<div class="points">
+			<p id="points"></p>
+		</div>
+        <div class="wrong-letters">
+            <p id="wrongLetters"></p>
+        </div>
+    </div>
+    <script src="./hangman.js"></script>
+</body>
